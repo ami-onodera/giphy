@@ -126,6 +126,13 @@ nav {
   max-width: 900px;
 }
 
+#searchResults {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
 @media (max-width: 992px) {
   #trendResults {
     grid-template-columns: 1fr 1fr 1fr;

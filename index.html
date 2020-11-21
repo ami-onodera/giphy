@@ -15,7 +15,7 @@
         <img src="/assets/GIPHYLogo.png" alt="Giphy Logo" onClick="clearSearch()" id="logo">
     </div>
     <nav class="nav">
-        <a class="nav-item" onClick="displayTrends()" href="#" id="trending">Trending</a>
+        <a class="nav-item" onClick="displayTrends()" id="trending">Trending</a>
         <a class="nav-item" onClick="displayRandom()" id="random">Random</a>
         <a class="nav-item" href="http://www.giphy.com" target="blank" id="giphy">giphy.com</a>
     </nav>
@@ -27,7 +27,7 @@
             <input type="text" class="form-control" placeholder="Type here to search" aria-label="search"
                 aria-describedby="search-button" id="search-box">
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="search-button"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-secondary" type="button" onClick="displaySearch()" id="search-button"><i class="fas fa-search"></i></button>
             </div>
         </div>
         <div class="trend-container">
@@ -35,6 +35,9 @@
         </div>
         <div class="random-container">
             <div id="randomResult"></div>
+        </div>
+        <div class="search-container">
+            <div id="searchResults"></div>
         </div>
     </div>    
     <script src="main.js"></script>
