@@ -1,9 +1,9 @@
 
 const apiKey = 'api_key=OAyL35F8mcAF0ba3i5nxeBgTVzbw9FW4';
 
-let trendElement = document.getElementById("trendResults");
-let randomElement = document.getElementById("randomResult");
-let searchElement = document.getElementById("searchResults");
+let trendElement = document.getElementById("trend-results");
+let randomElement = document.getElementById("random-result");
+let searchElement = document.getElementById("search-results");
 
 // get trending results
 

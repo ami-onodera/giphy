@@ -114,19 +114,19 @@ nav {
   justify-content: space-between;
 }
 
-#trendResults {
+#trend-results {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
 }
 
-#randomResult {
+#random-result {
   text-align: center;
   max-width: 900px;
 }
 
-#searchResults {
+#search-results {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -134,7 +134,7 @@ nav {
 }
 
 @media (max-width: 992px) {
-  #trendResults {
+  #trend-results {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .container {
@@ -143,7 +143,7 @@ nav {
 }
 
 @media (max-width: 768px) {
-  #trendResults {
+  #trend-results {
     grid-template-columns: 1fr 1fr;
   }
   .container {
@@ -152,7 +152,7 @@ nav {
 }
 
 @media (max-width: 568px) {
-  #trendResults {
+  #trend-results {
     grid-template-columns: 1fr;
   }
   .container {
