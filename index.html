@@ -15,9 +15,9 @@
         <a href="#"><img src="/assets/GIPHYLogo.png" alt="Giphy Logo"></a>
     </div>
     <nav class="nav">
-        <a class="nav-item" onClick="displayTrends()" href="#" id="categories">Trending</a>
-        <a class="nav-item" id="stickers">Random</a>
-        <a class="nav-item" href="http://www.giphy.com" target="blank" id="artists">giphy.com</a>
+        <a class="nav-item" onClick="displayTrends()" href="#" id="trending">Trending</a>
+        <a class="nav-item" onClick="displayRandom()" id="random">Random</a>
+        <a class="nav-item" href="http://www.giphy.com" target="blank" id="giphy">giphy.com</a>
     </nav>
 </header>
 
@@ -30,8 +30,11 @@
                 <button class="btn btn-outline-secondary" type="button" id="search-button"><i class="fas fa-search"></i></button>
             </div>
         </div>
-        <div class="results-container">
-            <div id="trendResults"></div>            
+        <div class="trend-container">
+            <div id="trendResults"></div>    
+        </div>
+        <div class="random-container">
+            <div id="randomResult"></div>
         </div>
     </div>    
     <script src="main.js"></script>

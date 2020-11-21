@@ -101,22 +101,22 @@ nav {
   border-top: 0.2em solid white;
 }
 
-#categories {
+#trending {
   border-bottom-color: #0cf;
   color: #0cf;
 }
 
-#stickers {
+#random {
   border-bottom-color: #0f9;
   color: #0f9;
 }
 
-#artists {
+#giphy {
   border-bottom-color: #93f;
   color: #93f;
 }
 
-.results-container {
+.trend-container {
   display: flex;
   justify-content: space-between;
 }
@@ -126,6 +126,11 @@ nav {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
+}
+
+#randomResult {
+  text-align: center;
+  max-width: 900px;
 }
 
 @media (max-width: 992px) {

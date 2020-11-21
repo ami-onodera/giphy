@@ -5,12 +5,10 @@ async function getTrends() {
     const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=12`
     const response = await fetch(trendUrl);
     const result = await response.json();
-
-    console.log(result);
     return result
 }
 
-function createTrendingGifs(data) {
+function createGifGrid(data) {
     let gifElement = document.createElement("img");
     gifElement.src = data.images.fixed_width.url;
     return gifElement
@@ -21,10 +19,33 @@ async function displayTrends() {
 
     const result = await getTrends();
     for (let i = 0; i <result.data.length; i++) {
-        let trendingGif = createTrendingGifs(result.data[i]);
+        let trendingGif = createGifGrid(result.data[i]);
         resultElement.appendChild(trendingGif)
     }
 }
+
+async function getRandom() {
+    const trendUrl = `https://api.giphy.com/v1/gifs/random?${apiKey}`
+    const response = await fetch(trendUrl);
+    const result = await response.json();
+    return result
+}
+
+async function displayRandom() {
+    let trendElement = document.getElementById("trendResults")
+    let resultElement = document.getElementById("randomResult");
+
+    const result = await getRandom()
+
+    // limpa a área de trabalho antes de mostrar novos resultados
+    trendElement.innerHTML = "";
+
+    let randomElement = document.createElement("img");
+    randomElement.src = result.data.images.original.url;
+    resultElement.appendChild(randomElement)
+}
+
+
 
 
 // async function searchGif() {
