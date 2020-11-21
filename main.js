@@ -4,6 +4,7 @@ const apiKey = 'api_key=OAyL35F8mcAF0ba3i5nxeBgTVzbw9FW4';
 let trendElement = document.getElementById("trend-results");
 let randomElement = document.getElementById("random-result");
 let searchElement = document.getElementById("search-results");
+let categoryElement = document.getElementById("category-results")
 
 // get trending results
 
@@ -97,3 +98,29 @@ async function displaySearch() {
     }
     search.value = "";
 }
+
+// editor's pick
+
+async function getCategory() {
+    const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
+    const response = await fetch(trendUrl);
+    const result = await response.json();
+    console.log(result);
+    return result
+}
+
+function createCategory(data) {
+    let category = document.createElement("img");
+    category.src = data.gif.images.fixed_width.url;
+    return category
+}
+
+async function displayCategory() {
+
+    const result = await getCategory();
+    for (let i = 0; i < 12; i++) {
+        let showCategory = createCategory(result.data[i]);
+        categoryElement.appendChild(showCategory)
+    }
+}
+displayCategory()
