@@ -43,10 +43,12 @@ async function displayRandom() {
 
     // limpa a área de trabalho antes de mostrar novos resultados
     trendElement.innerHTML = "";
+    resultElement.innerHTML = "";
 
     let randomElement = document.createElement("img");
     randomElement.src = result.data.images.original.url;
     resultElement.appendChild(randomElement)
+    // resultElement.innerHTML = "";
 }
 
 function clearSearch() {
