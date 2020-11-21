@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giphy Copycat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/48fbdddd94.js" crossorigin="anonymous"></script>
 </head>
 
 <header>
     <div class="logo">
         <a href="#"><img src="/assets/GIPHYLogo.png" alt="Giphy Logo"></a>
-        
     </div>
     <nav class="nav">
         <a class="nav-item" onClick="displayTrends()" href="#" id="categories">Trending</a>
@@ -20,9 +22,18 @@
 </header>
 
 <body>
-    <div id="trendResults">
-
-    </div>
+    <div class="container">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Type here to search" aria-label="search"
+                aria-describedby="search-button" id="search-box">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="results-container">
+            <div id="trendResults"></div>            
+        </div>
+    </div>    
     <script src="main.js"></script>
 </body>
 </html>

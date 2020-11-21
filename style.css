@@ -19,6 +19,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 body::after {
   clear: both;
   content: "";
@@ -60,6 +61,11 @@ nav a {
 
 nav {
   width: 400px;
+}
+
+.container {
+  margin-left: 8%;
+  max-width: 980px;
 }
 
 #upload {
@@ -110,16 +116,24 @@ nav {
   color: #93f;
 }
 
+.results-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 #trendResults {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  justify-self: stretch;
+  flex-grow: 1;
 }
 
 @media (max-width: 992px) {
   #trendResults {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container {
+    max-width: 800px;
   }
 }
 
@@ -127,10 +141,16 @@ nav {
   #trendResults {
     grid-template-columns: 1fr 1fr;
   }
+  .container {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 568px) {
   #trendResults {
     grid-template-columns: 1fr;
+  }
+  .container {
+    max-width: 400px;
   }
 }
