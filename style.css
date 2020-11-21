@@ -68,17 +68,8 @@ nav {
   max-width: 980px;
 }
 
-#upload {
-  background-color: #93f;
-}
-
-#create {
-  background-color: #4c197f;
-}
-
-#login {
-  background-color: #5c5c5c;
-  margin-left: 1em;
+#logo {
+  cursor: pointer;
 }
 
 .nav-item {

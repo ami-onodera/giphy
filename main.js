@@ -16,6 +16,10 @@ function createGifGrid(data) {
 
 async function displayTrends() {
     let resultElement = document.getElementById("trendResults");
+    let randomElement = document.getElementById("randomResult")
+
+    // limpa a área de trabalho antes de mostrar novos resultados
+    randomElement.innerHTML = "";
 
     const result = await getTrends();
     for (let i = 0; i <result.data.length; i++) {
@@ -45,6 +49,13 @@ async function displayRandom() {
     resultElement.appendChild(randomElement)
 }
 
+function clearSearch() {
+    let trendElement = document.getElementById("trendResults");
+    let randomElement = document.getElementById("randomResult")
+
+    trendElement.innerHTML = "";
+    randomElement.innerHTML = "";
+}
 
 
 
