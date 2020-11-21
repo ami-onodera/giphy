@@ -91,6 +91,7 @@ async function displaySearch() {
     trendElement.innerHTML = "";
     searchElement.innerHTML = "";
     
+    
     const result = await searchGif();
     for (let i = 0; i <result.data.length; i++) {
         let searchedGif = createGifGrid(result.data[i]);
@@ -101,26 +102,25 @@ async function displaySearch() {
 
 // editor's pick
 
-async function getCategory() {
-    const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
-    const response = await fetch(trendUrl);
-    const result = await response.json();
-    console.log(result);
-    return result
-}
+// async function getCategory() {
+//     const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
+//     const response = await fetch(trendUrl);
+//     const result = await response.json();
+//     return result
+// }
 
-function createCategory(data) {
-    let category = document.createElement("img");
-    category.src = data.gif.images.fixed_width.url;
-    return category
-}
+// function createCategory(data) {
+//     let category = document.createElement("img");
+//     category.src = data.gif.images.fixed_width.url;
+//     return category
+// }
 
-async function displayCategory() {
+// async function displayCategory() {
 
-    const result = await getCategory();
-    for (let i = 0; i < 12; i++) {
-        let showCategory = createCategory(result.data[i]);
-        categoryElement.appendChild(showCategory)
-    }
-}
-displayCategory()
+//     const result = await getCategory();
+//     for (let i = 0; i < 12; i++) {
+//         let showCategory = createCategory(result.data[i]);
+//         categoryElement.appendChild(showCategory)
+//     }
+// }
+// displayCategory()
