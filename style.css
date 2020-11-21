@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #131219;
+  color: white;
+  text-transform: uppercase;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+body > * {
+  float: left;
+  display: block;
+  margin-right: 1.2697468361%;
+  width: 83.1217088606%;
+  margin-left: 8.4391455697%;
+}
+body > *:last-child {
+  margin-right: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0 2em;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+nav a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+nav {
+  width: 400px;
+}
+
+#upload {
+  background-color: #93f;
+}
+
+#create {
+  background-color: #4c197f;
+}
+
+#login {
+  background-color: #5c5c5c;
+  margin-left: 1em;
+}
+
+.nav-item {
+  float: left;
+  display: block;
+  margin-right: 1.5275754716%;
+  width: 29%;
+  text-align: center;
+  border-bottom: 0.2em solid;
+  line-height: 2em;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
+}
+.nav-item:last-child {
+  margin-right: 0;
+}
+.nav-item:hover {
+  border-bottom: none;
+  border-top: 0.2em solid white;
+}
+
+#categories {
+  border-bottom-color: #0cf;
+  color: #0cf;
+}
+
+#stickers {
+  border-bottom-color: #0f9;
+  color: #0f9;
+}
+
+#artists {
+  border-bottom-color: #93f;
+  color: #93f;
+}
+
+#trendResults {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-self: stretch;
+}
+
+@media (max-width: 992px) {
+  #trendResults {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #trendResults {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 568px) {
+  #trendResults {
+    grid-template-columns: 1fr;
+  }
+}

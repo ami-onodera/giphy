@@ -6,24 +6,23 @@
     <title>Giphy Copycat</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<header>
+    <div class="logo">
+        <a href="#"><img src="/assets/GIPHYLogo.png" alt="Giphy Logo"></a>
+        
+    </div>
+    <nav class="nav">
+        <a class="nav-item" onClick="displayTrends()" href="#" id="categories">Trending</a>
+        <a class="nav-item" id="stickers">Random</a>
+        <a class="nav-item" href="http://www.giphy.com" target="blank" id="artists">giphy.com</a>
+    </nav>
+</header>
+
 <body>
     <div id="trendResults">
-        <ul id="trendList">
 
-        </ul>
     </div>
     <script src="main.js"></script>
 </body>
 </html>
-
-
-<!-- Final project
-
-Create a giphy gallery page
-* Use giphy API to get most trending / most popular / random
-* BONUS: Search by keyword
-
-Steps Get an API key for Giphy api
-Familiarize yourself with API and response 
-sketch / dummy gallery web
-Populate your gallery with data from the Giphy API -->
