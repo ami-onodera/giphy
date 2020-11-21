@@ -1,6 +1,8 @@
 
 const apiKey = 'api_key=OAyL35F8mcAF0ba3i5nxeBgTVzbw9FW4';
 
+// get trending results
+
 async function getTrends() {
     const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=12`
     const response = await fetch(trendUrl);
@@ -28,6 +30,8 @@ async function displayTrends() {
     }
 }
 
+// get random gif
+
 async function getRandom() {
     const trendUrl = `https://api.giphy.com/v1/gifs/random?${apiKey}`
     const response = await fetch(trendUrl);
@@ -48,8 +52,10 @@ async function displayRandom() {
     let randomElement = document.createElement("img");
     randomElement.src = result.data.images.original.url;
     resultElement.appendChild(randomElement)
-    // resultElement.innerHTML = "";
+
 }
+
+// clear workspace
 
 function clearSearch() {
     let trendElement = document.getElementById("trendResults");
@@ -60,6 +66,7 @@ function clearSearch() {
 }
 
 
+// search 
 
 // async function searchGif() {
 //     // fetch API response

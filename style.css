@@ -84,9 +84,11 @@ nav {
   font-weight: 600;
   transition: all 0.2s ease-out;
 }
+
 .nav-item:last-child {
   margin-right: 0;
 }
+
 .nav-item:hover {
   border-bottom: none;
   border-top: 0.2em solid white;
