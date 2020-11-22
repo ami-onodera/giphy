@@ -37,7 +37,6 @@ function createGifGrid(data) {
 
 async function displayTrends() {
 
-    // limpa a área de trabalho antes de mostrar novos resultados
     clearSearch()
 
     const result = await getTrends();
@@ -60,7 +59,6 @@ async function displayRandom() {
 
     const result = await getRandom()
 
-    // limpa a área de trabalho antes de mostrar novos resultados
     clearSearch()
 
     let newRandomElement = document.createElement("img");
@@ -118,6 +116,8 @@ function createCategory(data) {
 }
 
 async function displayCategory() {
+
+    clearSearch()
 
     const result = await getCategory();
     for (let i = 0; i < 27; i++) {
