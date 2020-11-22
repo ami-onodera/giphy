@@ -5,6 +5,7 @@ let trendElement = document.getElementById("trend-results");
 let randomElement = document.getElementById("random-result");
 let searchElement = document.getElementById("search-results");
 let categoryElement = document.getElementById("category-results")
+let categoryContainer = document.getElementById("category-container")
 
 // get trending results
 
@@ -100,27 +101,33 @@ async function displaySearch() {
     search.value = "";
 }
 
-// editor's pick
+// Categories
 
-// async function getCategory() {
-//     const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
-//     const response = await fetch(trendUrl);
-//     const result = await response.json();
-//     return result
-// }
+async function getCategory() {
+    const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
+    const response = await fetch(trendUrl);
+    const result = await response.json();
+    console.log(result);
+    return result
+}
 
-// function createCategory(data) {
-//     let category = document.createElement("img");
-//     category.src = data.gif.images.fixed_width.url;
-//     return category
-// }
+function createCategory(data) {
+    let categoryDiv = document.createElement("div");
+    categoryDiv.id = "category-div"
+    categoryDiv.innerHTML = `
+        <h5>${data.name}</h5>
+        <a href="https://giphy.com/categories/${data.name}" target="blank"><img src="${data.gif.images.fixed_width.url}"></a>
+    `
+    return categoryDiv
+}
 
-// async function displayCategory() {
+async function displayCategory() {
 
-//     const result = await getCategory();
-//     for (let i = 0; i < 12; i++) {
-//         let showCategory = createCategory(result.data[i]);
-//         categoryElement.appendChild(showCategory)
-//     }
-// }
-// displayCategory()
+    const result = await getCategory();
+    for (let i = 0; i < 12; i++) {
+        let showCategory = createCategory(result.data[i]);
+        console.log(showCategory);
+        categoryElement.appendChild(showCategory)
+    }
+}
+displayCategory()
