@@ -7,6 +7,7 @@ let searchElement = document.getElementById("search-results");
 let categoryElement = document.getElementById("category-results")
 let categoryContainer = document.getElementById("category-container")
 
+
 // get trending results
 
 async function getTrends() {
@@ -25,9 +26,7 @@ function createGifGrid(data) {
 async function displayTrends() {
 
     // limpa a área de trabalho antes de mostrar novos resultados
-    trendElement.innerHTML = "";
-    randomElement.innerHTML = "";
-    searchElement.innerHTML = "";
+    clearSearch()
 
     const result = await getTrends();
     for (let i = 0; i <result.data.length; i++) {
@@ -50,9 +49,7 @@ async function displayRandom() {
     const result = await getRandom()
 
     // limpa a área de trabalho antes de mostrar novos resultados
-    trendElement.innerHTML = "";
-    randomElement.innerHTML = "";
-    searchElement.innerHTML = "";
+    clearSearch()
 
     let newRandomElement = document.createElement("img");
     newRandomElement.src = result.data.images.original.url;
@@ -67,6 +64,7 @@ function clearSearch() {
     trendElement.innerHTML = "";
     randomElement.innerHTML = "";
     searchElement.innerHTML = "";
+    removeCategory()
 }
 
 
@@ -88,9 +86,7 @@ async function displaySearch() {
     let search = document.getElementById("search-box");
         
     // limpa a área de trabalho antes de mostrar novos resultados
-    randomElement.innerHTML = "";
-    trendElement.innerHTML = "";
-    searchElement.innerHTML = "";
+    clearSearch()
     
     
     const result = await searchGif();
@@ -131,3 +127,7 @@ async function displayCategory() {
     }
 }
 displayCategory()
+
+function removeCategory() {
+        categoryContainer.parentNode.removeChild(categoryContainer)
+}
