@@ -14,6 +14,9 @@ function clearSearch() {
     trendElement.innerHTML = "";
     randomElement.innerHTML = "";
     searchElement.innerHTML = "";
+    categoryContainer.innerHTML = "";
+    categoryElement.innerHTML = "";
+    categoryOuter.innerHTML = "";
 
     if (categoryContainer.parentNode) {
         categoryContainer.parentNode.removeChild(categoryContainer)
