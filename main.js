@@ -6,7 +6,19 @@ let randomElement = document.getElementById("random-result");
 let searchElement = document.getElementById("search-results");
 let categoryElement = document.getElementById("category-results")
 let categoryContainer = document.getElementById("category-container")
+let categoryOuter = document.getElementById("category-outer")
 
+// clear workspace
+
+function clearSearch() {
+    trendElement.innerHTML = "";
+    randomElement.innerHTML = "";
+    searchElement.innerHTML = "";
+
+    if (categoryContainer.parentNode) {
+        categoryContainer.parentNode.removeChild(categoryContainer)
+    } 
+}
 
 // get trending results
 
@@ -55,19 +67,7 @@ async function displayRandom() {
     newRandomElement.src = result.data.images.original.url;
 
     randomElement.appendChild(newRandomElement)
-
 }
-
-// clear workspace
-
-function clearSearch() {
-    trendElement.innerHTML = "";
-    randomElement.innerHTML = "";
-    searchElement.innerHTML = "";
-    removeCategory()
-}
-
-
 // search results
 
 async function searchGif() {
@@ -120,14 +120,11 @@ function createCategory(data) {
 async function displayCategory() {
 
     const result = await getCategory();
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 27; i++) {
         let showCategory = createCategory(result.data[i]);
-        console.log(showCategory);
-        categoryElement.appendChild(showCategory)
+        categoryElement.appendChild(showCategory);
+        categoryContainer.appendChild(categoryElement);
+        categoryOuter.appendChild(categoryContainer);
     }
 }
-displayCategory()
-
-function removeCategory() {
-        categoryContainer.parentNode.removeChild(categoryContainer)
-}
+displayCategory();
