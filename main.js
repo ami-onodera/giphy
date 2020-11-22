@@ -122,12 +122,24 @@ async function displayCategory() {
 
     clearSearch()
 
+    let categoryTitle = document.createElement("h2");
+    categoryTitle.id = "category-title"
+    categoryTitle.textContent = `Categories`
+
+    categoryContainer.appendChild(categoryTitle)
+
+    let separator = document.createElement("div");
+    separator.id = "gradient-separator"
+
+    categoryContainer.appendChild(separator)
+
     const result = await getCategory();
     for (let i = 0; i < 27; i++) {
         let showCategory = createCategory(result.data[i]);
         categoryElement.appendChild(showCategory);
-        categoryContainer.appendChild(categoryElement);
-        categoryOuter.appendChild(categoryContainer);
     }
+    
+    categoryContainer.appendChild(categoryElement);
+    categoryOuter.appendChild(categoryContainer);
 }
 displayCategory();

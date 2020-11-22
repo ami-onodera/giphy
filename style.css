@@ -109,7 +109,7 @@ nav {
   color: #93f;
 }
 
-.gradient-separator {
+#gradient-separator {
   height: 5px;
   background: linear-gradient(
     90deg,
