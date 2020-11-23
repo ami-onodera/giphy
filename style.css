@@ -18,10 +18,10 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
-body::after {
+/* body::after {
   clear: both;
   content: "";
   display: block;
@@ -35,7 +35,7 @@ body > * {
 }
 body > *:last-child {
   margin-right: 0;
-}
+} */
 
 a {
   color: white;
@@ -43,18 +43,26 @@ a {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  background-color: #131219;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 0 2em;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; */
 }
+
+/* .container-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: #131219;
+  height: 100px;
+} */
 
 h1 {
   margin: 0;
@@ -69,11 +77,11 @@ nav a {
 
 nav {
   width: 400px;
-  margin-right: 250px;
 }
 
 .container {
   margin-left: 8%;
+  margin-right: 8%;
   max-width: 980px;
 }
 
