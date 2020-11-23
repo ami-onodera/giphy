@@ -46,7 +46,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 5;
+  width: 100%;
   background-color: #131219;
 
   display: flex;
@@ -68,6 +69,7 @@ nav a {
 
 nav {
   width: 400px;
+  margin-right: 250px;
 }
 
 .container {
@@ -82,8 +84,8 @@ nav {
 .nav-item {
   float: left;
   display: block;
-  margin-right: 1.5275754716%;
-  width: 29%;
+  margin-right: 1.5%;
+  width: 30%;
   text-align: center;
   border-bottom: 0.2em solid;
   line-height: 2em;
@@ -160,6 +162,10 @@ nav {
 
 #category-div {
   text-align: center;
+}
+
+#category-title {
+  padding: 20px 0 5px 0;
 }
 
 @media (max-width: 992px) {

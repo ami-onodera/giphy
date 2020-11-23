@@ -1,0 +1,1 @@
+const animatedTags = document.querySelectorAll("section div")
