@@ -10,7 +10,6 @@ let searchContainer = document.getElementById("search-container")
 let categoryElement = document.getElementById("category-results");
 let categoryContainer = document.getElementById("category-container");
 let categoryOuter = document.getElementById("category-outer");
-let trendingSearch = document.getElementById("trending-search-container")
 
 // clear workspace
 
