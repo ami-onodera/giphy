@@ -10,6 +10,7 @@ let searchContainer = document.getElementById("search-container")
 let categoryElement = document.getElementById("category-results");
 let categoryContainer = document.getElementById("category-container");
 let categoryOuter = document.getElementById("category-outer");
+let trendingSearch = document.getElementById("trending-search-container")
 
 // clear workspace
 
@@ -82,7 +83,7 @@ async function getRandom() {
     const trendUrl = `https://api.giphy.com/v1/gifs/random?${apiKey}`
     const response = await fetch(trendUrl);
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
     return result
 }
 
@@ -110,7 +111,6 @@ async function displayRandom() {
     newRandomElement.innerHTML = `
         <a href="${result.data.url}" target="blank"><img src="${result.data.images.original.url}"></a>
     `
-
     randomElement.appendChild(newRandomElement)
     randomContainer.appendChild(randomElement)
 }
@@ -198,4 +198,5 @@ async function displayCategory() {
     categoryContainer.appendChild(categoryElement);
     categoryOuter.appendChild(categoryContainer);
 }
+
 displayCategory();

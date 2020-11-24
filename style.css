@@ -146,6 +146,26 @@ nav {
   padding: 20px 0 5px 0;
 }
 
+footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  /* position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100; */
+}
+
+footer a {
+  text-decoration: none;
+  color: #0cf;
+  transition: 0.5s;
+}
+
+footer a:hover {
+  color: #93f;
+}
+
 @media (max-width: 992px) {
   #trend-results #search-results #category-results {
     grid-template-columns: 1fr 1fr 1fr;
