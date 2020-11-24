@@ -112,11 +112,6 @@ nav {
   margin-bottom: 30px;
 }
 
-.trend-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 #trend-results {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

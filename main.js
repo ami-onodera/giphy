@@ -2,18 +2,24 @@
 const apiKey = 'api_key=OAyL35F8mcAF0ba3i5nxeBgTVzbw9FW4';
 
 let trendElement = document.getElementById("trend-results");
+let trendContainer = document.getElementById("trend-container");
+let randomContainer = document.getElementById("random-container");
 let randomElement = document.getElementById("random-result");
 let searchElement = document.getElementById("search-results");
-let categoryElement = document.getElementById("category-results")
-let categoryContainer = document.getElementById("category-container")
-let categoryOuter = document.getElementById("category-outer")
+let searchContainer = document.getElementById("search-container")
+let categoryElement = document.getElementById("category-results");
+let categoryContainer = document.getElementById("category-container");
+let categoryOuter = document.getElementById("category-outer");
 
 // clear workspace
 
 function clearSearch() {
     trendElement.innerHTML = "";
+    trendContainer.innerHTML = "";
     randomElement.innerHTML = "";
+    randomContainer.innerHTML = "";
     searchElement.innerHTML = "";
+    searchContainer.innerHTML = "";
     categoryContainer.innerHTML = "";
     categoryElement.innerHTML = "";
     categoryOuter.innerHTML = "";
@@ -42,10 +48,22 @@ async function displayTrends() {
 
     clearSearch()
 
+    let trendTitle = document.createElement("h2");
+    trendTitle.id = "category-title"
+    trendTitle.textContent = `Trending Gifs`
+
+    trendContainer.appendChild(trendTitle)
+
+    let separator = document.createElement("div");
+    separator.id = "gradient-separator"
+
+    trendContainer.appendChild(separator)
+
     const result = await getTrends();
     for (let i = 0; i <result.data.length; i++) {
         let trendingGif = createGifGrid(result.data[i]);
         trendElement.appendChild(trendingGif)
+        trendContainer.appendChild(trendElement)
     }
 }
 
@@ -64,10 +82,22 @@ async function displayRandom() {
 
     clearSearch()
 
+    let randomTitle = document.createElement("h2");
+    randomTitle.id = "category-title"
+    randomTitle.textContent = `Random Gif`
+
+    randomContainer.appendChild(randomTitle)
+
+    let separator = document.createElement("div");
+    separator.id = "gradient-separator"
+
+    randomContainer.appendChild(separator)
+
     let newRandomElement = document.createElement("img");
     newRandomElement.src = result.data.images.original.url;
 
     randomElement.appendChild(newRandomElement)
+    randomContainer.appendChild(randomElement)
 }
 // search results
 
@@ -88,12 +118,24 @@ async function displaySearch() {
         
     // limpa a área de trabalho antes de mostrar novos resultados
     clearSearch()
+
+    let searchTitle = document.createElement("h2");
+    searchTitle.id = "category-title"
+    searchTitle.textContent = `Search Results`
+
+    searchContainer.appendChild(searchTitle)
+
+    let separator = document.createElement("div");
+    separator.id = "gradient-separator"
+
+    searchContainer.appendChild(separator)
     
     
     const result = await searchGif();
     for (let i = 0; i <result.data.length; i++) {
         let searchedGif = createGifGrid(result.data[i]);
         searchElement.appendChild(searchedGif)
+        searchContainer.appendChild(searchElement)
     }
     search.value = "";
 }
