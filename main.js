@@ -26,7 +26,7 @@ function clearSearch() {
 // get trending results
 
 async function getTrends() {
-    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=12`
+    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=24`
     const response = await fetch(trendUrl);
     const result = await response.json();
     return result
@@ -75,7 +75,7 @@ async function searchGif() {
     
   let search = document.getElementById("search-box");
   let searchGif = search.value;
-  let searchUrl = `https://api.giphy.com/v1/gifs/search?q=${searchGif}&${apiKey}&limit=20`;
+  let searchUrl = `https://api.giphy.com/v1/gifs/search?q=${searchGif}&${apiKey}&limit=24`;
 
   const response = await fetch(searchUrl);
   const result = await response.json();

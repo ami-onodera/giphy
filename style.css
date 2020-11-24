@@ -1,4 +1,4 @@
-html {
+/* html {
   box-sizing: border-box;
 }
 
@@ -6,7 +6,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-}
+} */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -18,24 +18,8 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 120px; */
+  padding-top: 120px;
 }
-
-/* body::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-body > * {
-  float: left;
-  display: block;
-  margin-right: 1.2697468361%;
-  width: 83.1217088606%;
-  margin-left: 8.4391455697%;
-}
-body > *:last-child {
-  margin-right: 0;
-} */
 
 a {
   color: white;
@@ -48,21 +32,11 @@ header {
   align-items: center;
   padding: 0.5em 0 2em;
 
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; */
-}
-
-/* .container-head {
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
   background-color: #131219;
-  height: 100px;
-} */
+  z-index: 5;
+}
 
 h1 {
   margin: 0;
@@ -77,6 +51,7 @@ nav a {
 
 nav {
   width: 400px;
+  margin-left: 500px;
 }
 
 .container {
