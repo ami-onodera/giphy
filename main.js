@@ -38,9 +38,18 @@ async function getTrends() {
     return result
 }
 
-function createGifGrid(data) {
-    let gifElement = document.createElement("img");
-    gifElement.src = data.images.fixed_width.url;
+// function createGifGrid(data) {
+//     let gifElement = document.createElement("img");
+//     gifElement.src = data.images.fixed_width.url;
+//     return gifElement
+// }
+
+function createGifDiv(data) {
+    let gifElement = document.createElement("div")
+    gifElement.id = "element-div"
+    gifElement.innerHTML = `
+        <a href="${data.url}" target="blank"><img src="${data.images.fixed_width.url}"></a>
+    `
     return gifElement
 }
 
@@ -61,7 +70,7 @@ async function displayTrends() {
 
     const result = await getTrends();
     for (let i = 0; i <result.data.length; i++) {
-        let trendingGif = createGifGrid(result.data[i]);
+        let trendingGif = createGifDiv(result.data[i]);
         trendElement.appendChild(trendingGif)
         trendContainer.appendChild(trendElement)
     }
@@ -73,6 +82,7 @@ async function getRandom() {
     const trendUrl = `https://api.giphy.com/v1/gifs/random?${apiKey}`
     const response = await fetch(trendUrl);
     const result = await response.json();
+    console.log(result);
     return result
 }
 
@@ -133,7 +143,7 @@ async function displaySearch() {
     
     const result = await searchGif();
     for (let i = 0; i <result.data.length; i++) {
-        let searchedGif = createGifGrid(result.data[i]);
+        let searchedGif = createGifDiv(result.data[i]);
         searchElement.appendChild(searchedGif)
         searchContainer.appendChild(searchElement)
     }
@@ -146,7 +156,6 @@ async function getCategory() {
     const trendUrl = `https://api.giphy.com/v1/gifs/categories?${apiKey}`
     const response = await fetch(trendUrl);
     const result = await response.json();
-    console.log(result);
     return result
 }
 
