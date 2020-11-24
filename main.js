@@ -103,8 +103,13 @@ async function displayRandom() {
 
     randomContainer.appendChild(separator)
 
-    let newRandomElement = document.createElement("img");
-    newRandomElement.src = result.data.images.original.url;
+    // let newRandomElement = document.createElement("img");
+    // newRandomElement.src = result.data.images.original.url;
+
+    let newRandomElement = document.createElement("div")
+    newRandomElement.innerHTML = `
+        <a href="${result.data.url}" target="blank"><img src="${result.data.images.original.url}"></a>
+    `
 
     randomElement.appendChild(newRandomElement)
     randomContainer.appendChild(randomElement)
