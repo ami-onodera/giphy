@@ -82,7 +82,7 @@ async function getRandom() {
     const trendUrl = `https://api.giphy.com/v1/gifs/random?${apiKey}`
     const response = await fetch(trendUrl);
     const result = await response.json();
-    // console.log(result);
+    console.log(result);
     return result
 }
 
@@ -110,6 +110,7 @@ async function displayRandom() {
     newRandomElement.innerHTML = `
         <a href="${result.data.url}" target="blank"><img src="${result.data.images.original.url}"></a>
     `
+    console.log(result.data.images.original.url);
     randomElement.appendChild(newRandomElement)
     randomContainer.appendChild(randomElement)
 }
