@@ -146,9 +146,44 @@ nav {
   padding: 20px 0 5px 0;
 }
 
+.form-control:focus {
+  border-color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#search-box {
+  border-radius: 3px 3px 0px 0px;
+}
+
+.mb-3,
+.my-3 {
+  margin-bottom: 0 !important;
+}
+
 #list {
   list-style: none;
   padding-left: 0px;
+}
+
+#suggestion-item {
+  cursor: pointer;
+  background-color: white;
+  color: #131219;
+  padding-left: 10px;
+  text-transform: none;
+  margin: 0px 41px 0px 0;
+  line-height: 35px;
+  align-items: center;
+}
+
+#suggestion-item:last-child {
+  border-radius: 0px 0px 3px 3px;
+}
+
+#suggestion-item:hover {
+  background-color: #3a393d;
+  color: white;
 }
 
 footer {
