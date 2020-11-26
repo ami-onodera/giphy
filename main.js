@@ -46,7 +46,6 @@ async function getTrends() {
 
 function createGifDiv(data) {
     let gifElement = document.createElement("div")
-    gifElement.id = "element-div"
     gifElement.innerHTML = `
         <a href="${data.url}" target="blank"><img src="${data.images.fixed_width.url}"></a>
     `
@@ -190,7 +189,7 @@ async function displayCategory() {
     categoryContainer.appendChild(separator)
 
     const result = await getCategory();
-    for (let i = 0; i < 27; i++) {
+    for (let i = 0; i < result.data.length; i++) {
         let showCategory = createCategory(result.data[i]);
         categoryElement.appendChild(showCategory);
     }
