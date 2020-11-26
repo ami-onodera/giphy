@@ -146,6 +146,11 @@ nav {
   padding: 20px 0 5px 0;
 }
 
+#list {
+  list-style: none;
+  padding-left: 0px;
+}
+
 footer {
   padding-bottom: 20px;
   background-color: #131219;

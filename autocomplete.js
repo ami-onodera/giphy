@@ -27,7 +27,5 @@ async function getAutoComplete(word) {
         autocompleteContainer.appendChild(suggestionBox)   
     }
 
-    // suggestionBox.innerHTML = "";
-
   return result
 }
