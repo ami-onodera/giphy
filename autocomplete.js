@@ -21,11 +21,22 @@ async function getAutoComplete(word) {
     for (let i = 0; i < 5; i++) {
         let suggestion = result.data[i].name
         let suggestionBox = document.createElement("li");
+        suggestionBox.id = `suggestion-item`;
+        suggestionBox.setAttribute("onclick", `selectedOption('${suggestion}')`);
 
-        suggestionBox.innerText = suggestion
+        suggestionBox.innerText = suggestion;
 
         autocompleteContainer.appendChild(suggestionBox)   
     }
-
   return result
 }
+
+let selectedOption = function(value) {
+    let search = document.getElementById("search-box");
+    let button = document.getElementById("search-button")
+    search.value = value
+    button.click()
+
+    autocompleteContainer.innerHTML = "";
+    console.log(value);
+} 
