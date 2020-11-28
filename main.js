@@ -32,7 +32,7 @@ function clearSearch() {
 // get trending results
 
 async function getTrends() {
-    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=24`
+    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=35`
     const response = await fetch(trendUrl);
     const result = await response.json();
     return result
@@ -46,6 +46,7 @@ async function getTrends() {
 
 function createGifDiv(data) {
     let gifElement = document.createElement("div")
+    gifElement.className = "each-gif"
     gifElement.innerHTML = `
         <a href="${data.url}" target="blank"><img src="${data.images.fixed_width.url}"></a>
     `
@@ -119,7 +120,7 @@ async function searchGif() {
     
   let search = document.getElementById("search-box");
   let searchGif = search.value;
-  let searchUrl = `https://api.giphy.com/v1/gifs/search?q=${searchGif}&${apiKey}&limit=24`;
+  let searchUrl = `https://api.giphy.com/v1/gifs/search?q=${searchGif}&${apiKey}&limit=35`;
 
   const response = await fetch(searchUrl);
   const result = await response.json();
@@ -165,9 +166,10 @@ async function getCategory() {
 
 function createCategory(data) {
     let categoryDiv = document.createElement("div");
+    categoryDiv.className = "each-gif"
     categoryDiv.innerHTML = `
-    <div class="card bg-dark">
-        <img class="card-img" src="${data.gif.images.fixed_width.url}">
+    <div class="card">
+        <img class="card-img" id="card" src="${data.gif.images.fixed_width.url}">
         <a href="https://giphy.com/categories/${data.name}" target="blank">
             <div class="card-img-overlay">
                 <h5 class="card-title text-center align-middle">${data.name}</h5>

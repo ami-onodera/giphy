@@ -1,0 +1,50 @@
+/* grid for categories */
+
+.category-results {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  /* line-height: 145%; */
+  height: 1300px;
+  width: 100%;
+}
+
+.category-results .card-img img {
+  width: 100%;
+  display: block;
+}
+
+.each-gif {
+  margin-bottom: 16px;
+  border-radius: 3px;
+}
+
+/* grid for trending results */
+
+#trend-results {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 2000px;
+  width: 100%;
+}
+
+#trend-results .each-gif {
+  display: block;
+  /* width: 100%; */
+}
+
+/* grid for search results  */
+
+#search-results {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 2000px;
+  width: 100%;
+}
+
+#search-results .each-gif {
+  display: block;
+  /* width: 100%; */
+}
