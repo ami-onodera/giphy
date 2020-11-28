@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giphy Copycat</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <!-- Favicons -->
-    <link href="assets/giphyicon45.png" rel="icon">
-    <link href="assets/giphyicon45.png" rel="apple-touch-icon">
+    <link href="assets/giphyicon45.png" rel="icon" />
+    <link href="assets/giphyicon45.png" rel="apple-touch-icon" />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/48fbdddd94.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/48fbdddd94.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<div class="container-head"></div>
-<header>
+  <div class="container-head"></div>
+  <header>
     <div class="logo">
-        <img src="/assets/GIPHYLogo.png" alt="Giphy Logo" onClick="displayCategory()" id="logo">
+      <img
+        src="/assets/GIPHYLogo.png"
+        alt="Giphy Logo"
+        onClick="displayCategory()"
+        id="logo"
+      />
     </div>
     <nav class="nav">
-        <a class="nav-item" onClick="displayTrends()" id="trending">Trending</a>
-        <a class="nav-item" onClick="displayRandom()" id="random">Random</a>
-        <a class="nav-item" onClick="displayCategory()" id="category">Category</a>
+      <a class="nav-item" onClick="displayTrends()" id="trending">Trending</a>
+      <a class="nav-item" onClick="displayRandom()" id="random">Random</a>
+      <a class="nav-item" onClick="displayCategory()" id="category">Category</a>
     </nav>
-</header>
+  </header>
 
-<body>
+  <body>
     <div class="container">
-        <div id="search-bar-container">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Type here to search" aria-label="search"
-                    aria-describedby="search-button" id="search-box" onkeyup="getAutoComplete(this.value)">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" onClick="displaySearch()" id="search-button"><i
-                            class="fas fa-search"></i></button>
-                </div>
-            </div>
-            <div id="autocomplete"> 
-                <ul id="list"></ul>
-            </div>
+      <div id="search-bar-container">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Type here to search"
+            aria-label="search"
+            aria-describedby="search-button"
+            id="search-box"
+            onkeyup="getAutoComplete(this.value)"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              onClick="displaySearch()"
+              id="search-button"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
-        
-        <section>
-            <div class="trend-outer">
-                <div id="trend-container">
-                    <div id="trend-results"></div>
-                </div>
-            </div>
+        <div id="autocomplete">
+          <ul id="list"></ul>
+        </div>
+      </div>
 
-            <div class="random-outer">
-                <div id="random-container">
-                    <div id="random-result"></div>
-                </div>
-            </div>
-            
-            <div class="search-outer">
-                <div id="search-container">
-                    <div id="search-results"></div>
-                </div>
-            </div>
-            
-            <div id="category-outer">
-                <div id="category-container">
-                    <div id="category-results"></div>
-                </div>
-            </div>
+      <section>
+        <div class="trend-outer">
+          <div id="trend-container">
+            <div id="trend-results"></div>
+          </div>
+        </div>
 
-        </section>
-        <footer id="footer">
-            <div id="gradient-bottom"></div>
-            <a href="https://github.com/ami-onodera/giphy">Made with 💜  by Ami Onodera</a> using <a href="https://developers.giphy.com/">Giphy Developers API</a>
-        </footer>
-    </div>    
+        <div class="random-outer">
+          <div id="random-container">
+            <div id="random-result"></div>
+          </div>
+        </div>
+
+        <div class="search-outer">
+          <div id="search-container">
+            <div id="search-results"></div>
+          </div>
+        </div>
+
+        <div id="category-outer">
+          <div id="category-container">
+            <div id="category-results"></div>
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <div id="gradient-bottom"></div>
+        <a href="https://github.com/ami-onodera/giphy"
+          >Made with 💜 by Ami Onodera</a
+        >
+        using <a href="https://developers.giphy.com/">Giphy Developers API</a>
+      </footer>
+    </div>
     <script src="main.js"></script>
     <script src="autocomplete.js"></script>
-</body>
+  </body>
 </html>
-
