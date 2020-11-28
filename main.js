@@ -165,11 +165,15 @@ async function getCategory() {
 
 function createCategory(data) {
     let categoryDiv = document.createElement("div");
-    categoryDiv.id = "category-div"
     categoryDiv.innerHTML = `
-        <h5>${data.name}</h5>
-        <a href="https://giphy.com/categories/${data.name}" target="blank"><img src="${data.gif.images.fixed_width.url}"></a>
-    `
+    <div class="card bg-dark">
+        <img class="card-img" src="${data.gif.images.fixed_width.url}">
+        <a href="https://giphy.com/categories/${data.name}" target="blank">
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center align-middle">${data.name}</h5>
+            </div>
+        </a>
+    </div>`
     return categoryDiv
 }
 

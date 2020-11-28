@@ -1,3 +1,5 @@
+@import url(cards.css);
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -146,11 +148,26 @@ nav {
   grid-gap: 16px;
   flex-grow: 1;
   padding-bottom: 100px;
-  /* align-items: center; */
+  align-items: center;
 }
 
-#category-div {
-  text-align: center;
+.card-img {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-img:hover {
+  background-color: black;
+}
+
+.card-img-overlay h5 {
+  color: white;
+  text-shadow: 2px 2px black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #category-title {
