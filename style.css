@@ -142,6 +142,14 @@ nav {
   transform: translate(-50%, -50%);
 }
 
+.card-img-overlay {
+  transition: 0.5s;
+}
+.card-img-overlay:hover {
+  background-color: #131219ad;
+  border: solid 1px white;
+}
+
 .form-control:focus {
   border-color: white;
   -webkit-box-shadow: none;
@@ -216,7 +224,7 @@ footer a:hover {
   color: #93f;
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   #trend-results #search-results #category-results {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -250,4 +258,4 @@ footer a:hover {
   .nav-item {
     width: 100%;
   }
-}
+} */

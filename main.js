@@ -48,7 +48,12 @@ function createGifDiv(data) {
     let gifElement = document.createElement("div")
     gifElement.className = "each-gif"
     gifElement.innerHTML = `
-        <a href="${data.url}" target="blank"><img src="${data.images.fixed_width.url}"></a>
+    <a href="${data.url}" target="blank">
+        <div class="card">
+            <img class="card-img" src="${data.images.fixed_width.url}">
+            <div class="card-img-overlay"></div>
+        </div>
+    </a> 
     `
     return gifElement
 }
