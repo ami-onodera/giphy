@@ -111,9 +111,13 @@ async function displayRandom() {
     // let newRandomElement = document.createElement("img");
     // newRandomElement.src = result.data.images.original.url;
 
-    let newRandomElement = document.createElement("div")
+    let newRandomElement = document.createElement("a")
+    newRandomElement.href = `${result.data.url}" target="blank`
     newRandomElement.innerHTML = `
-        <a href="${result.data.url}" target="blank"><img src="${result.data.images.original.url}"></a>
+            <div class="card">
+                <img class="card-img" src="${result.data.images.original.url}">
+                <div class="card-img-overlay"><div>
+            </div>
     `
     console.log(result.data.images.original.url);
     randomElement.appendChild(newRandomElement)
