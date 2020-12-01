@@ -22,6 +22,7 @@ async function getAutoComplete(word) {
         let suggestion = result.data[i].name
         let suggestionBox = document.createElement("li");
         suggestionBox.id = `suggestion-item`;
+        suggestionBox.className = `suggestion`
         suggestionBox.setAttribute("onclick", `selectedOption('${suggestion}')`);
 
         suggestionBox.innerText = suggestion;

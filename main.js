@@ -32,7 +32,7 @@ function clearSearch() {
 // get trending results
 
 async function getTrends() {
-    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=35`
+    const trendUrl = `https://api.giphy.com/v1/gifs/trending?${apiKey}&limit=40`
     const response = await fetch(trendUrl);
     const result = await response.json();
     return result
