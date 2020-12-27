@@ -4,4 +4,6 @@ This was my final project from the JavaScript course at *ReDi School* in Berlin,
 
 In this project I used the Giphy API to develop a simplified version of [Giphy](http://www.giphy.com) using HTML, CSS and JavaScript. <br>
 
-**[Click here](https://giphy.vercel.app/)** to see the project live! 
+**[Click here](https://giphy.vercel.app/)** to see the project live!  <br>
+
+You can see all projects from the *2020 Fall Semester from ReDi School Berlin* [on youtube](https://www.youtube.com/watch?v=uZZdNoUB3w0), my presentation starts at **2:49:25**. 🤓 💻
